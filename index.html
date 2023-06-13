@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+            // #2(გამოიყენეთ ყველა მეთოდი და კონსოლში დალოგეთ შედეგები, ისე როგორ სტრინგებზე გააკეთეთ;)
+        const fruits = ["Banana", "Orange", "Apple", "Mango"];
+        const fruits2 = ['mango' , 'orange']
+        let lenght = fruits.length
+        let string = fruits.toString()
+        let join = fruits.join(' 12 ')
+        let pop = fruits.pop()
+        let push = fruits.push('niko')
+        let shift = fruits.shift()
+        let unshift = fruits.unshift('lasha')
+        let remove = delete fruits[2]
+        let concat = fruits2.concat(fruits)
+        let flat = fruits.flat()
+        let slice = fruits.slice()
+        console.log(lenght , string , join , pop , push , shift , unshift , remove , concat , flat ,slice)
+            // #3(დაამატეთ ობიექტების მასივი (სახელი, გვარი, ასაკი, პროფესია, ქულა);  map მეთოდის გამოყენებით შექმენით ახალი მასივი სადაც მხოლოდ სახელი და გვარი  იქნება. ['ნოკა ყიფიანი', 'გიორგი აბუთიძე'....] map მეთოდის გამოყენებით შექმენით ახალი მასივი სადაც ქულებს გაამრავლებთ 2 ზე და მასივში მხოლოდ რიცხვითი მნიშნელობები გექნებათ. [10,20,30] და ა.შ.)
+        const persons = [
+            {
+                name: 'niko',
+                lasha: 'shamugia',
+                age: 13,
+                profession: "none",
+                grade: 9.8
+            },
+            {
+                name: 'lasha',
+                lasha: 'shamugia',
+                age: 18,
+                profession: "none",
+                grade: 9.8
+            },
+            {
+                name: 'mamuka',
+                lasha: 'shamugia',
+                age: 40,
+                profession: " idk ",
+                grade: 9.8
+            },
+            {
+                name: 'sopo',
+                lasha: 'shamugia',
+                age: 38,
+                profession: " idk ",
+                grade: 9.8
+            }
+        ];
+        for (let i = 0; i < persons.length; i++) {
+            const map1 = persons.map(person => person.name);
+            console.log(map1);
+        }
+        const map2 = persons.map(person => person.grade);
+        for (let i = 0; i < map2.length; i++) {
+        const map3 = map2[i] * 2;
+        console.log(map3);
+        }
+        // #4
+        let sum = map2.reduce((accumulator, currentValue) => accumulator + currentValue, 0)
+        console.log(sum)
+
+    </script>
+</body>
+</html>
